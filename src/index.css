@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+:root {
+  --primary: #1a8cff;
+  --primary-light: #e8f4ff;
+  --primary-dark: #0066cc;
+  --green: #34c759;
+  --green-light: #e6f9ec;
+  --orange: #ff9f0a;
+  --orange-light: #fff5e0;
+  --red: #ff3b30;
+  --red-light: #ffeceb;
+  --purple: #af52de;
+  --purple-light: #f5ecfa;
+  /* Extended badge palette */
+  --teal: #0f766e;
+  --teal-light: #ccfbf1;
+  --amber: #b45309;
+  --amber-light: #fef3c7;
+  --indigo: #4338ca;
+  --indigo-light: #e0e7ff;
+  --lime: #4d7c0f;
+  --lime-light: #ecfccb;
+  --sky: #0369a1;
+  --sky-light: #e0f2fe;
+  --rose: #be185d;
+  --rose-light: #fce7f3;
+  --cyan: #0e7490;
+  --cyan-light: #cffafe;
+  --violet: #6d28d9;
+  --violet-light: #ede9fe;
+  --slate: #475569;
+  --slate-light: #f1f5f9;
+  --gray-50: #f8f8fb;
+  --gray-100: #f0f2f5;
+  --gray-200: #e4e7ec;
+  --gray-300: #d0d5dd;
+  --gray-400: #98a2b3;
+  --gray-500: #667085;
+  --gray-600: #475467;
+  --gray-700: #344054;
+  --gray-800: #1d2939;
+  --gray-900: #101828;
+  --card-bg: #ffffff;
+  --sidebar-width: 240px;
+  --radius: 12px;
+  --shadow-sm: 0 1px 3px rgba(16,24,40,.06), 0 1px 2px rgba(16,24,40,.04);
+  --shadow-md: 0 4px 12px rgba(16,24,40,.08);
+}
+
+/* Dark mode theme */
+body.dark {
+  --primary: #3d9eff;
+  --primary-light: rgba(61, 158, 255, 0.15);
+  --primary-dark: #1a8cff;
+  --green: #34c759;
+  --green-light: rgba(52, 199, 89, 0.15);
+  --orange: #ff9f0a;
+  --orange-light: rgba(255, 159, 10, 0.15);
+  --red: #ff453a;
+  --red-light: rgba(255, 69, 58, 0.15);
+  --purple: #bf5af2;
+  --purple-light: rgba(191, 90, 242, 0.15);
+  /* Extended badge palette – dark mode */
+  --teal: #2dd4bf;
+  --teal-light: rgba(45, 212, 191, 0.15);
+  --amber: #fbbf24;
+  --amber-light: rgba(251, 191, 36, 0.15);
+  --indigo: #818cf8;
+  --indigo-light: rgba(129, 140, 248, 0.15);
+  --lime: #a3e635;
+  --lime-light: rgba(163, 230, 53, 0.15);
+  --sky: #38bdf8;
+  --sky-light: rgba(56, 189, 248, 0.15);
+  --rose: #fb7185;
+  --rose-light: rgba(251, 113, 133, 0.15);
+  --cyan: #22d3ee;
+  --cyan-light: rgba(34, 211, 238, 0.15);
+  --violet: #a78bfa;
+  --violet-light: rgba(167, 139, 250, 0.15);
+  --slate: #94a3b8;
+  --slate-light: rgba(148, 163, 184, 0.15);
+  --gray-50: #1a1d24;
+  --gray-100: #22262f;
+  --gray-200: #2d323d;
+  --gray-300: #3d4352;
+  --gray-400: #6c7489;
+  --gray-500: #9299ab;
+  --gray-600: #b1b7c7;
+  --gray-700: #d0d4e0;
+  --gray-800: #e4e6ed;
+  --gray-900: #f5f6fa;
+  --card-bg: #22262f;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.4);
+}
+
+body.dark::before {
+  background: radial-gradient(circle, rgba(52,199,89,.08) 0%, transparent 70%);
+}
+
+body.dark::after {
+  background: radial-gradient(circle, rgba(61,158,255,.06) 0%, transparent 70%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: var(--gray-50);
+  color: var(--gray-800);
+  min-height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Background decoration matching EmpInfo */
+body::before {
+  content: '';
+  position: fixed;
+  bottom: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(52,199,89,.12) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(26,140,255,.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate { animation: fadeUp .4s ease both; }
+.delay-1 { animation-delay: .05s; }
+.delay-2 { animation-delay: .1s; }
+.delay-3 { animation-delay: .15s; }
+.delay-4 { animation-delay: .2s; }
+.delay-5 { animation-delay: .25s; }
+
+#root {
+  width: 100%;
+  display: flex;
+}

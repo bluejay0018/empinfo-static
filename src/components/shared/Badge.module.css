@@ -1,0 +1,53 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.default {
+  background: var(--gray-200);
+  color: var(--gray-700);
+}
+
+.blue {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.green {
+  background: var(--green-light);
+  color: #1a8a3e;
+}
+
+.orange {
+  background: var(--orange-light);
+  color: #b36d00;
+}
+
+.red {
+  background: var(--red-light);
+  color: var(--red);
+}
+
+.purple {
+  background: #f0e6ff;
+  color: #6b21a8;
+}
+
+/* ── Extended palette (verification badges) ──────────────────────────────── */
+.teal   { background: var(--teal-light);   color: var(--teal); }
+.amber  { background: var(--amber-light);  color: var(--amber); }
+.indigo { background: var(--indigo-light); color: var(--indigo); }
+.lime   { background: var(--lime-light);   color: var(--lime); }
+.sky    { background: var(--sky-light);    color: var(--sky); }
+.rose   { background: var(--rose-light);   color: var(--rose); }
+.cyan   { background: var(--cyan-light);   color: var(--cyan); }
+.violet { background: var(--violet-light); color: var(--violet); }
+.slate  { background: var(--slate-light);  color: var(--slate); }

@@ -1,0 +1,56 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.select {
+  padding: 6px 10px;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--gray-700);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+  appearance: auto;
+}
+
+.select:hover  { border-color: var(--gray-400); }
+.select:focus  { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light); }
+
+.customRange {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: slideIn 0.15s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.dateInput {
+  padding: 6px 10px;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--gray-700);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+
+.dateInput:hover { border-color: var(--gray-400); }
+.dateInput:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light); }
+
+.sep {
+  font-size: 12px;
+  color: var(--gray-400);
+  flex-shrink: 0;
+}

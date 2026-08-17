@@ -1,0 +1,27 @@
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  text-align: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 48px;
+  opacity: 0.3;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--gray-500);
+}
