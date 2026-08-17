@@ -1,26 +1,23 @@
+import type { ReportStatus } from '../../types';
 import styles from './StatusBadge.module.css';
 
-type Status = 'pending' | 'in-progress' | 'completed' | 'overdue' | 'blocked';
-
 interface StatusBadgeProps {
-  status: Status;
+  status: ReportStatus;
   showDot?: boolean;
 }
 
-const LABELS: Record<Status, string> = {
-  'pending':     'Pending',
-  'in-progress': 'In Progress',
-  'completed':   'Completed',
-  'overdue':     'Overdue',
-  'blocked':     'Blocked',
+export const STATUS_LABELS: Record<ReportStatus, string> = {
+  'new':                'New',
+  'pending':            'Pending',
+  'filled':             'Filled',
+  'third-party-filled': '3rd Party Filled',
 };
 
-const CSS_CLASS: Record<Status, string> = {
-  'pending':     'pending',
-  'in-progress': 'inProgress',
-  'completed':   'completed',
-  'overdue':     'overdue',
-  'blocked':     'blocked',
+const CSS_CLASS: Record<ReportStatus, string> = {
+  'new':                'new',
+  'pending':            'pending',
+  'filled':             'filled',
+  'third-party-filled': 'thirdPartyFilled',
 };
 
 export default function StatusBadge({ status, showDot = false }: StatusBadgeProps) {
@@ -28,7 +25,7 @@ export default function StatusBadge({ status, showDot = false }: StatusBadgeProp
   return (
     <span className={`${styles.badge} ${styles[cls]}`}>
       {showDot && <span className={styles.dot} />}
-      {LABELS[status] ?? status}
+      {STATUS_LABELS[status] ?? status}
     </span>
   );
 }

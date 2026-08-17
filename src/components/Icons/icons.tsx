@@ -30,6 +30,7 @@ import {
   faLocationDot,
   faList,
   faEllipsis,
+  faEllipsisVertical,
   faRoute,
   faCode,
   faFolderOpen,
@@ -38,6 +39,8 @@ import {
   faShieldHalved,
   faSliders,
   faDollarSign,
+  faBan,
+  faRotateLeft,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFileLines,
@@ -209,6 +212,10 @@ export const MoreHorizontalIcon = (props?: IconProps) => (
   <FontAwesomeIcon icon={faEllipsis} {...props} />
 );
 
+export const MoreVerticalIcon = (props?: IconProps) => (
+  <FontAwesomeIcon icon={faEllipsisVertical} {...props} />
+);
+
 export const RouteIcon = (props?: IconProps) => (
   <FontAwesomeIcon icon={faRoute} {...props} />
 );
@@ -243,4 +250,12 @@ export const SlidersIcon = (props?: IconProps) => (
 
 export const GripIcon = (props?: IconProps) => (
   <FontAwesomeIcon icon={faGrip} {...props} />
+);
+
+export const BanIcon = (props?: IconProps) => (
+  <FontAwesomeIcon icon={faBan} {...props} />
+);
+
+export const RotateLeftIcon = (props?: IconProps) => (
+  <FontAwesomeIcon icon={faRotateLeft} {...props} />
 );

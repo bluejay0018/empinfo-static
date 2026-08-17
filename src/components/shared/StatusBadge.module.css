@@ -17,14 +17,12 @@
   flex-shrink: 0;
 }
 
-.completed  { background: var(--green-light);   color: #1a8a3e; }
-.inProgress { background: var(--primary-light); color: var(--primary); }
-.pending    { background: var(--orange-light);  color: #b36d00; }
-.overdue    { background: var(--red-light);     color: var(--red); }
-.blocked    { background: var(--purple-light);  color: var(--purple); }
+.new              { background: var(--primary-light); color: var(--primary); }
+.pending          { background: var(--orange-light);  color: #b36d00; }
+.filled           { background: var(--green-light);   color: #1a8a3e; }
+.thirdPartyFilled { background: var(--green-light);   color: #1a8a3e; }
 
-.completed  .dot { background: var(--green); }
-.inProgress .dot { background: var(--primary); }
-.pending    .dot { background: var(--orange); }
-.overdue    .dot { background: var(--red); }
-.blocked    .dot { background: var(--purple); }
+.new              .dot { background: var(--primary); }
+.pending          .dot { background: var(--orange); }
+.filled           .dot { background: var(--green); }
+.thirdPartyFilled .dot { background: var(--green); }

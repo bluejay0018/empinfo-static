@@ -15,3 +15,21 @@ export interface Location {
   country: string;
   employeeCount: number;
 }
+
+export type ReportStatus = 'new' | 'pending' | 'filled' | 'third-party-filled';
+
+export type ReportType = 'Employment Verification' | 'Education Verification' | 'Background Check' | 'Reference Check';
+
+export interface Report {
+  id: string;
+  reportNumber: string;
+  referenceNumber: string;
+  applicant: string;
+  employer: string;
+  type: ReportType;
+  status: ReportStatus;
+  filledBy: string;
+  user: string;
+  createdAt: string;
+  updatedAt: string;
+}
